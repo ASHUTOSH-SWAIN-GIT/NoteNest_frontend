@@ -1,13 +1,14 @@
-"use client"
-import HeroSection from "./components/heroSection"
 
+import HeroSection from "./components/heroSection"
+import CardComponent from "./components/CardComponent";
 
 
 export default function Home() {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col">
+    <div className=" text-white min-h-screen flex flex-col">
       
        <HeroSection/>
+       <CardComponent/>
     </div>
   );
 }
