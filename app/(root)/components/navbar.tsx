@@ -38,8 +38,8 @@ export default function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary" href="/sign-in">Login</NavbarButton>
-            <NavbarButton variant="primary">Sign up </NavbarButton>
+            <NavbarButton variant="secondary" >Login</NavbarButton>
+            <NavbarButton variant="primary" href="/sign-up">Sign up </NavbarButton>
           </div>
         </NavBody>
 

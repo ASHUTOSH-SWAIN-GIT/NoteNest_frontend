@@ -129,3 +129,23 @@ body {
     @apply  text-foreground;
   }
 }
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes floatTilt {
+  0% { transform: translateY(0) rotate(10deg); }
+  50% { transform: translateY(-20px) rotate(13deg); }
+  100% { transform: translateY(0) rotate(10deg); }
+}
+
+.animate-float-tilt {
+  animation: floatTilt 4s ease-in-out infinite;
+}
+
