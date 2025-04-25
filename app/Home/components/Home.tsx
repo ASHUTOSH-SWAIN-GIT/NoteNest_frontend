@@ -9,7 +9,7 @@ import { ShoppingCartIcon } from "lucide-react"
 import { DollarSignIcon } from "lucide-react"
 import { UserPenIcon } from "lucide-react"
 import FileUploadDemo from "./fileUpload"
-import {CardWithForm} from "./inputCard"
+import { CardWithForm } from "./inputCard"
 
 export default function SidebarDemo() {
   const links = [
@@ -21,7 +21,7 @@ export default function SidebarDemo() {
     {
       label: "purchase Notes",
       href: "#",
-        icon: <CreditCardIcon className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
+      icon: <CreditCardIcon className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
     },
     {
       label: "Your Cart",
@@ -102,14 +102,16 @@ export const LogoIcon = () => {
   )
 }
 
-// Dummy dashboard component with content
+
 const Dashboard = () => {
   return (
     <div className="flex flex-1">
-      <div className="flex h-full w-full flex-1 flex-col gap-2 rounded-tl-2xl border border-neutral-200 bg-white p-2 md:p-10 dark:border-neutral-700 dark:bg-neutral-900">
-        <FileUploadDemo/>
-        <CardWithForm/>
+      <div className="flex w-full flex-row gap-4 rounded-tl-2xl border border-neutral-200 bg-white p-2 md:p-10 dark:border-neutral-700 dark:bg-neutral-900">
+        <FileUploadDemo />
+        <CardWithForm />
       </div>
+
     </div>
+
   )
 }

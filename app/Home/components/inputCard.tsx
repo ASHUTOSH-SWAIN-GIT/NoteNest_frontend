@@ -3,41 +3,35 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Textarea } from "@/components/ui/textarea"
 
 export function CardWithForm() {
   return (
-    <Card className="w-[350px]">
+    <Card className="w-1/2 border-neutral-800 h-[400px]">
       <CardHeader>
         <CardTitle>Create project</CardTitle>
         <CardDescription>Deploy your new project in one-click.</CardDescription>
       </CardHeader>
       <CardContent>
         <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" />
+          <div className="grid w-full items-center gap-4 ">
+            <div className="flex flex-col space-y-1.5 " >
+              <Label htmlFor="name">Subject</Label>
+              <Input id="name" placeholder="Enter subject " className="border-neutral-800"/>
             </div>
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="framework">Framework</Label>
-              <Select>
-                <SelectTrigger id="framework">
-                  <SelectValue placeholder="Select" />
-                </SelectTrigger>
-                <SelectContent position="popper">
-                  <SelectItem value="next">Next.js</SelectItem>
-                  <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                  <SelectItem value="astro">Astro</SelectItem>
-                  <SelectItem value="nuxt">Nuxt.js</SelectItem>
-                </SelectContent>
-              </Select>
+            <div className="flex flex-col space-y-1.5 " >
+              <Textarea placeholder="description" className="border-neutral-800"/>
             </div>
+            <div className="flex flex-col space-y-1.5 " >
+              <Label htmlFor="name">Price</Label>
+              <Input  placeholder="Enter Price " className="border-neutral-800"/>
+            </div>
+          
           </div>
         </form>
       </CardContent>
       <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Deploy</Button>
+        <Button variant="outline" className="text-black font-sans font-bold border-neutral-800 bg-white">Publish</Button>
       </CardFooter>
     </Card>
   )
