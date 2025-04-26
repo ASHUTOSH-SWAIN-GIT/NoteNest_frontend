@@ -8,7 +8,7 @@ export default function SignupFormDemo() {
     const {  error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: 'http://localhost:3000/Home', // Adjust as needed
+        redirectTo: 'https://note-nest-frontend.vercel.app/Home', // Adjust as needed
       }
     });
 

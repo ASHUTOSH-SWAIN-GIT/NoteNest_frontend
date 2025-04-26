@@ -47,7 +47,7 @@ export const FileUpload = ({
   });
 
   return (
-    <div className="w-full" {...getRootProps()}>
+    <div className="w-1/2 " {...getRootProps()}>
       <motion.div
         onClick={handleClick}
         whileHover="animate"

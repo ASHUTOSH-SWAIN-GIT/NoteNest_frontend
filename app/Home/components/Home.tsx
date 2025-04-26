@@ -8,7 +8,7 @@ import { CreditCardIcon } from "lucide-react"
 import { ShoppingCartIcon } from "lucide-react"
 import { DollarSignIcon } from "lucide-react"
 import { UserPenIcon } from "lucide-react"
-import FileUploadDemo from "./fileUpload"
+import {FileUpload} from "@/components/ui/file-upload"
 import { CardWithForm } from "./inputCard"
 
 export default function SidebarDemo() {
@@ -107,7 +107,7 @@ const Dashboard = () => {
   return (
     <div className="flex flex-1">
       <div className="flex w-full flex-row gap-4 rounded-tl-2xl border border-neutral-200 bg-white p-2 md:p-10 dark:border-neutral-700 dark:bg-neutral-900">
-        <FileUploadDemo />
+        <FileUpload />
         <CardWithForm />
       </div>
 
