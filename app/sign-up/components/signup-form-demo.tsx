@@ -1,9 +1,7 @@
 "use client"
 import type React from "react"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
-import { IconBrandGithub, IconBrandGoogle, IconBrandOnlyfans } from "@tabler/icons-react"
+import {  IconBrandGoogle } from "@tabler/icons-react"
 import { supabase } from "@/lib/supabaseClient"; // Adjust import as per your setup
 
 export default function SignupFormDemo() {
