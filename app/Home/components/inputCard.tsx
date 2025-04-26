@@ -21,10 +21,7 @@ export function CardWithForm() {
             <div className="flex flex-col space-y-1.5 " >
               <Textarea placeholder="description" className="border-neutral-800"/>
             </div>
-            <div className="flex flex-col space-y-1.5 " >
-              <Label htmlFor="name">Price</Label>
-              <Input  placeholder="Enter Price " className="border-neutral-800"/>
-            </div>
+           
           
           </div>
         </form>

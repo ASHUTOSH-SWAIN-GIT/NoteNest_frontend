@@ -6,7 +6,7 @@ import { supabase } from "@/lib/supabaseClient"; // Adjust import as per your se
 
 export default function SignupFormDemo() {
   const handleOAuthSignIn = async () => {
-    const { data, error } = await supabase.auth.signInWithOAuth({
+    const {  error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
         redirectTo: 'http://localhost:3000/Home', // Adjust as needed
@@ -67,12 +67,3 @@ const BottomGradient = () => {
   )
 }
 
-const LabelInputContainer = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode
-  className?: string
-}) => {
-  return <div className={cn("flex w-full flex-col space-y-2", className)}>{children}</div>
-}
