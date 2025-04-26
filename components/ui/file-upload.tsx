@@ -22,7 +22,7 @@ const secondaryVariant = {
 };
 
 export const FileUpload = ({
-  onChange,
+  
 }: {
   onChange?: (files: File[]) => void;
 }) => {
