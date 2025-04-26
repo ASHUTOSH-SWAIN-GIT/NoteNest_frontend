@@ -1,13 +1,16 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
+// ✅ Interface now has a custom optional prop (to fix the Vercel build issue)
 interface RainbowButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  isLoading?: boolean; // optional prop (you can use it later if you want)
+}
 
 export const RainbowButton = React.forwardRef<
   HTMLButtonElement,
   RainbowButtonProps
->(({ children, className, ...props }, ref) => {
+>(({ children, className, isLoading, ...props }, ref) => {
   return (
     <button
       ref={ref}
@@ -21,9 +24,10 @@ export const RainbowButton = React.forwardRef<
         "dark:bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]",
         className,
       )}
+      disabled={isLoading} // 👈 optional: disables button when loading
       {...props}
     >
-      {children}
+      {isLoading ? "Loading..." : children}
     </button>
   );
 });
